@@ -25,6 +25,7 @@ public class Planet : MonoBehaviour {
 	public void newTurn (){
 		totalShip += shipRate;
 		text.text = totalShip.ToString();
+		Debug.Log (totalShip);
 
 
 	}

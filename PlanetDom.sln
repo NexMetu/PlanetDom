@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{4F1F99D1-9EA3-28C1-BF4E-7208C69E4F87}") = "PlanetDom", "Assembly-CSharp.csproj", "{E15F7D7E-B327-B59C-DC6F-CEDDFF828BBF}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetDom", "Assembly-CSharp.csproj", "{E15F7D7E-B327-B59C-DC6F-CEDDFF828BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

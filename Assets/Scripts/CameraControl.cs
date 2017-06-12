@@ -69,7 +69,7 @@ public class CameraControl : MonoBehaviour {
 		if (atTopWall && (moveVertical < 0)) {
 			moveVertical = 0;
 		}
-		if (atLeftWall && (moveVertical > 0)) {
+		if (atBtmWall && (moveVertical > 0)) {
 			moveVertical = 0;
 		}
 
