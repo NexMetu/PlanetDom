@@ -9,8 +9,9 @@ public class Planet : MonoBehaviour {
 	public int totalShip = 0;
 	//this planetstate is showing if the planet is either yours(0), netural(1) or an enemies (2)
 	public int planetstate = 1;
-	Text text;
+	GameObject textfield;
 	Canvas menu;
+	GameObject button;
 	bool selected;
  
 
@@ -18,6 +19,8 @@ public class Planet : MonoBehaviour {
 	void Start () {
 		menu= GetComponentInChildren<Canvas> ();
 		menu.enabled = false;
+		GameObject[] array = menu.GetComponentsInChildren<GameObject> ();
+			
 		text = GetComponentInChildren<Text> ();
 		if (text == null)
 			Debug.Log ("not text field found");
@@ -32,6 +35,7 @@ public class Planet : MonoBehaviour {
 		if (!selected && planetstate == 0) {
 			Debug.Log ("Mouse has entered");
 			menu.enabled = true;
+			menu.GetComponentInChildren<"MoveButton"> ();
 		}
 	}
 
@@ -59,3 +63,4 @@ public class Planet : MonoBehaviour {
 	}
 
 }
+
