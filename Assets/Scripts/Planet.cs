@@ -7,6 +7,8 @@ public class Planet : MonoBehaviour {
 
 	public int shipRate;
 	public int totalShip = 0;
+	//this planetstate is showing if the planet is either yours(0), netural(1) or an enemies (2)
+	public int planetstate = 1;
 	Text text;
 	Canvas menu;
 	bool selected;
@@ -27,26 +29,28 @@ public class Planet : MonoBehaviour {
 	}
 
 	void OnMouseEnter() {
-		if (!selected) {
+		if (!selected && planetstate == 0) {
 			Debug.Log ("Mouse has entered");
 			menu.enabled = true;
 		}
 	}
 
 	void OnMouseOver() {
-		if (Input.GetMouseButtonDown (0))
+		if (Input.GetMouseButtonDown (0) && planetstate == 0)
 			selected = !selected;
 		
 	}
 
 	void OnMouseExit(){
-		if (!selected) {
+		if (!selected && planetstate == 0) {
 			Debug.Log ("Mouse Exit");
 			menu.enabled = false;
 		}
 	}
 
 	public void newTurn (){
+		selected = false;
+		menu.enabled = false;
 		totalShip += shipRate;
 		text.text = totalShip.ToString();
 		Debug.Log (totalShip);

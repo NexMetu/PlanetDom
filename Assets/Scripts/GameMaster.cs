@@ -18,6 +18,12 @@ public class GameMaster : MonoBehaviour {
 	}
 	public void startTurn(){
 		text.CrossFadeAlpha(0f, 3f,false);
+		planetlist [0].GetComponent<Planet> ().planetstate = 0;
+
+	}
+
+	public void move() {
+
 
 	}
 
